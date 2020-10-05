@@ -17,7 +17,7 @@ function init() {
     main.appendChild(row2)
     main.appendChild(row3)
 }
-// let number = 0
+let number = 0
 
 function whichSymbol() {
     // if () {
@@ -26,7 +26,8 @@ function whichSymbol() {
     // else {
     //     return "O";
     // }
-
+    number++
+    console.log(number)
 }
 
 function generateElement(type, id, classList, text, parent = false) {
