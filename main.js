@@ -49,10 +49,10 @@ function isEven(e) {
 
     number++;
     if (number % 2 == 0) {
-        document.getElementById(this.id).innerHTML = "X";
+        document.getElementById(this.id).innerHTML = "❌";
     }
     else {
-        document.getElementById(this.id).innerHTML = "O";
+        document.getElementById(this.id).innerHTML = "⭕️";
         v = 2;
     }
     buttonData[identity] = v;
@@ -72,10 +72,10 @@ function checkWin() {
             }
             if (hasWon) {
                 if (sum == 3) {
-                    return alert("player 2 wins")
+                    return alert("player 2 wins 🎉")
                 }
                 if (sum == 6) {
-                    return alert("player 1 wins")
+                    return alert("player 1 wins 🎉")
                 }
             }
         //}
