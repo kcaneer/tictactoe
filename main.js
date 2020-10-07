@@ -2,19 +2,19 @@ function init() {
     //generates the columns and rows and at the end appends them to the main div//
     // function generateElement(type, id, classList, style, text, parent = false, event = false)
     let main = document.getElementById("main");
-    generateElement('div', 'header', 'row text-center w-75 d-block mx-auto bg-secondary text-white mb-5', '', "Tic Tac Toe <br> Player 1 = O <br> Player 2 = X", main);
+    generateElement('div', 'header', 'row text-center w-75 d-block mx-auto bg-secondary text-white mb-5', '', "<strong>Tic Tac Toe</strong> <br> Player 1 = O <br> Player 2 = X", main);
     let row1 = generateElement('div', 'row1', 'row bg-primary w-50 mx-auto','height:75px;', '', '');
-    generateElement('div', '0', 'col-4 border border-secondary', '', '', row1, true);
-    generateElement('div', '1', 'col-4 border border-secondary', '', '', row1, true);
-    generateElement('div', '2', 'col-4 border border-secondary', '', '', row1, true);
+    generateElement('div', '0', 'content_center col-4 border border-secondary', '', '', row1, true);
+    generateElement('div', '1', 'content_center col-4 border border-secondary', '', '', row1, true);
+    generateElement('div', '2', 'content_center col-4 border border-secondary', '', '', row1, true);
     let row2 = generateElement('div', 'row2', 'row bg-info w-50 mx-auto','height:75px;', '', '');
-    generateElement('div', '3', 'col-4 border border-secondary', '', '', row2, true);
-    generateElement('div', '4', 'col-4 border border-secondary', '', '', row2, true);
-    generateElement('div', '5', 'col-4 border border-secondary', '', '', row2, true);
+    generateElement('div', '3', 'content_center col-4 border border-secondary', '', '', row2, true);
+    generateElement('div', '4', 'content_center col-4 border border-secondary', '', '', row2, true);
+    generateElement('div', '5', 'content_center col-4 border border-secondary', '', '', row2, true);
     let row3 = generateElement('div', 'row3', 'row bg-primary w-50 mx-auto','height:75px;', '', '');
-    generateElement('div', '6', 'col-4 border border-secondary', '', '', row3, true);
-    generateElement('div', '7', 'col-4 border border-secondary', '', '', row3, true);
-    generateElement('div', '8', 'col-4 border border-secondary', '', '', row3, true);
+    generateElement('div', '6', 'content_center col-4 border border-secondary', '', '', row3, true);
+    generateElement('div', '7', 'content_center col-4 border border-secondary', '', '', row3, true);
+    generateElement('div', '8', 'content_center col-4 border border-secondary', '', '', row3, true);
     main.appendChild(row1);
     main.appendChild(row2);
     main.appendChild(row3);
@@ -34,7 +34,6 @@ function generateElement(type, id, classList, style, text, parent = false, event
 
     if (event) {
         newElement.addEventListener("click", isEven);
-        // newElement.addEventListener("click2", checkWin);
     }
     return newElement
 }
