@@ -50,11 +50,13 @@ function isEven(e) {
     number++;
     if (number % 2 == 0) {
         document.getElementById(this.id).innerHTML = "⭕️";
-        document.getElementById('turn').innerHTML = "Player 1 it is your turn!"
+        document.getElementById('turn').innerHTML = "Player 1 it is your turn!";
+        document.getElementById(this.id).removeEventListener("click", isEven);
     }
     else {
         document.getElementById(this.id).innerHTML = "❌";
-        document.getElementById('turn').innerHTML = "Player 2 it is your turn!"
+        document.getElementById('turn').innerHTML = "Player 2 it is your turn!";
+        document.getElementById(this.id).removeEventListener("click", isEven);;
         v = 2;
     }
     buttonData[identity] = v;
