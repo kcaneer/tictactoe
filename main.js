@@ -2,7 +2,7 @@ function init() {
     //generates the columns and rows and at the end appends them to the main div//
     // function generateElement(type, id, classList, style, text, parent = false, event = false)
     let main = document.getElementById("main");
-    generateElement('div', 'header', 'row text-center w-75 d-block mx-auto bg-secondary text-white mb-5', '', "<strong>Tic Tac Toe</strong> <br> Player 1 = O <br> Player 2 = X", main);
+    generateElement('div', 'header', 'row text-center w-75 d-block mx-auto bg-secondary text-white', '', "<strong>Tic Tac Toe</strong> <br> Player 1 = O <br> Player 2 = X", main);
     let row1 = generateElement('div', 'row1', 'row bg-primary w-50 mx-auto','height:75px;', '', '');
     generateElement('div', '0', 'content_center col-4 border border-secondary', '', '', row1, true);
     generateElement('div', '1', 'content_center col-4 border border-secondary', '', '', row1, true);
@@ -15,6 +15,7 @@ function init() {
     generateElement('div', '6', 'content_center col-4 border border-secondary', '', '', row3, true);
     generateElement('div', '7', 'content_center col-4 border border-secondary', '', '', row3, true);
     generateElement('div', '8', 'content_center col-4 border border-secondary', '', '', row3, true);
+    generateElement('div', 'turn', 'row text-center d-block w-25 mx-auto bg-secondary text-white mt-2 mb-5', '', 'Player 1 it is your turn!', main, '');
     main.appendChild(row1);
     main.appendChild(row2);
     main.appendChild(row3);
@@ -48,10 +49,12 @@ function isEven(e) {
 
     number++;
     if (number % 2 == 0) {
-        document.getElementById(this.id).innerHTML = "❌";
+        document.getElementById(this.id).innerHTML = "⭕️";
+        document.getElementById('turn').innerHTML = "Player 1 it is your turn!"
     }
     else {
-        document.getElementById(this.id).innerHTML = "⭕️";
+        document.getElementById(this.id).innerHTML = "❌";
+        document.getElementById('turn').innerHTML = "Player 2 it is your turn!"
         v = 2;
     }
     buttonData[identity] = v;
