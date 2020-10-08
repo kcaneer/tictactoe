@@ -27,7 +27,7 @@ function init() {
 //function to create Restart button//
 function startOver() {
     init();
-
+    buttonData = buttonData.map(num => num = 0);
 }
 
 //function to generate the elements used in init function
@@ -50,6 +50,7 @@ function generateElement(type, id, classList, style, text, parent = false, event
 
 let number = 0
 let buttonData = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 let winData = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
 //figures out if even or odd click (player one or two) and decides whether to put x or o
 function isEven(e) {
