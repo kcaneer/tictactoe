@@ -26,8 +26,8 @@ function init() {
 
 //function to create Restart button//
 function startOver() {
-    init();
-    buttonData = buttonData.map(num => num = 0);
+    init(); //call init function to reset each element i created//
+    buttonData = buttonData.map(num => num = 0); //use map function to reset button data to zero// 
 }
 
 //function to generate the elements used in init function
