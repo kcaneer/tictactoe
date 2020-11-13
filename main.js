@@ -80,22 +80,25 @@ function checkWin() {
         var indexes = winData[i];
         var hasWon = true;
         var sum = 0;
-        // for (var j = 0; j < indexes.length; j++) {
         sum = buttonData[indexes[0]] + buttonData[indexes[1]] + buttonData[indexes[2]];
         buttonSum = buttonData.reduce((a, b) => a + b, 0);
-        if (buttonSum == 14) {
-            return alert("You tied! Click restart to play again!")
-        }
+
         if (buttonData[indexes[0]] == 0 || buttonData[indexes[1]] == 0 || buttonData[indexes[2]] == 0) {
             hasWon = false;
         }
         if (hasWon) {
             if (sum == 3) {
-                return alert("player 2 wins 🎉")
+                alert("player 2 wins 🎉");
+                startOver();
             }
             if (sum == 6) {
-                return alert("player 1 wins 🎉")
-            }
+                alert("player 1 wins 🎉");
+                startOver();
+            }  
+        }
+        if (buttonSum == 14) {
+            alert("You tied! Click restart to play again!")
+            startOver();
         }
     }
 }
